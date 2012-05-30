@@ -1,0 +1,25 @@
+I have used rebar to deploy the app, so in order to run just compile, create a release and lunch it with console attached.
+
+./rebar compile eunit
+
+will compile the app simple_bs and run automatically the tests
+
+./rebar generate
+
+will generate a embeded system only for this app that you can use this script to run
+
+sh rel/simple_bs/bin/simple_bs console
+
+And you can simple test it like this:
+
+(simple_bs@127.0.0.1)1> simple_bs_srv:insert(7).
+ok
+(simple_bs@127.0.0.1)2> simple_bs_srv:withdrawl(70).
+ok
+(simple_bs@127.0.0.1)3> simple_bs_srv:get_balance().
+Bank System Balance : -63
+ok
+
+The code itself can be found all in simple_bs_srv.erl and i used edoc for generating documentation for it.
+
+As long as i could get the objective was to build a simple unique balance for the "bank" account so witch user inserts or gets the money does not really matters.

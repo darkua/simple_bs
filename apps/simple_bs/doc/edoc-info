@@ -1,0 +1,3 @@
+{application,simple_bs}.
+{packages,[tests]}.
+{modules,[simple_bs_app,simple_bs_srv,simple_bs_sup]}.
